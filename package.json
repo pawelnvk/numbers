@@ -1,17 +1,17 @@
 {
-  "name": "@stencil/starter",
+  "name": "numbers",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "description": "Numbers App",
   "scripts": {
     "build": "stencil build --prerender",
     "start": "stencil build --dev --watch --serve",
     "test": "jest",
-    "test.watch": "jest --watch"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@stencil/core": "^0.10.0",
-    "@stencil/router": "^0.2.2"
+    "@stencil/sass": "^0.0.5"
   },
   "devDependencies": {
     "@types/jest": "^21.1.1",
@@ -19,13 +19,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+    "url": "git+https://github.com/pawelnvk/numbers.git"
   },
-  "author": "Ionic Team",
+  "author": "Paweł Nowak",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
   "homepage": "https://github.com/ionic-team/stencil",
   "jest": {
     "transform": {

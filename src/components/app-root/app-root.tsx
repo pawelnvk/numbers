@@ -1,27 +1,53 @@
-import { Component } from '@stencil/core';
+import { Component, State } from '@stencil/core';
 
+import { getNumberFact } from '../../api/numbers';
 
 @Component({
   tag: 'app-root',
-  styleUrl: 'app-root.css'
+  styleUrl: 'app-root.scss',
+  scoped: true
 })
 export class AppRoot {
+  @State() fact: string = null;
+
+  handeFormSubmit = ({ number }) => {
+    if (!number) {
+      this.fact = null;
+
+      return;
+    }
+
+    getNumberFact(number)
+      .then(({ text }) => {
+        this.fact = text;
+      });
+  }
 
   render() {
     return (
-      <div>
-        <header>
-          <h1>Stencil App Starter</h1>
-        </header>
+      <div class="root">
+        <app-header>
+          <h1 class="root__heading">Facts about numbers</h1>
+        </app-header>
 
-        <main>
-          <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url='/' component='app-home' exact={true} />
-              <stencil-route url='/profile/:name' component='app-profile' />
-            </stencil-route-switch>
-          </stencil-router>
-        </main>
+        <app-main>
+          <app-form
+            class="root__section"
+            onFormSubmit={this.handeFormSubmit}
+          >
+            <app-input
+              class="root__form-item"
+              name="number"
+              placeholder="enter number"
+            />
+
+            <app-button class="root__form-item" type="submit">
+              Search
+            </app-button>
+          </app-form>
+
+          {this.fact && <app-text class="root__section">{this.fact}</app-text>}
+        </app-main>
       </div>
     );
   }

@@ -28,37 +28,100 @@ declare global {
 import '@stencil/router';
 import '@stencil/state-tunnel';
 
-import {
-  MatchResults,
-} from '@stencil/router';
 
 declare global {
 
   namespace StencilComponents {
-    interface AppHome {
-
+    interface AppButton {
+      'type': string;
     }
   }
 
-  interface HTMLAppHomeElement extends StencilComponents.AppHome, HTMLStencilElement {}
+  interface HTMLAppButtonElement extends StencilComponents.AppButton, HTMLStencilElement {}
 
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLAppButtonElement: {
+    prototype: HTMLAppButtonElement;
+    new (): HTMLAppButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'app-button': HTMLAppButtonElement;
   }
   interface ElementTagNameMap {
-    'app-home': HTMLAppHomeElement;
+    'app-button': HTMLAppButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-home': JSXElements.AppHomeAttributes;
+      'app-button': JSXElements.AppButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
+    export interface AppButtonAttributes extends HTMLAttributes {
+      'type'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface AppForm {
+      'onFormSubmit': (values: Object) => void;
+    }
+  }
+
+  interface HTMLAppFormElement extends StencilComponents.AppForm, HTMLStencilElement {}
+
+  var HTMLAppFormElement: {
+    prototype: HTMLAppFormElement;
+    new (): HTMLAppFormElement;
+  };
+  interface HTMLElementTagNameMap {
+    'app-form': HTMLAppFormElement;
+  }
+  interface ElementTagNameMap {
+    'app-form': HTMLAppFormElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'app-form': JSXElements.AppFormAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppFormAttributes extends HTMLAttributes {
+      'onFormSubmit'?: (values: Object) => void;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface AppHeader {
+
+    }
+  }
+
+  interface HTMLAppHeaderElement extends StencilComponents.AppHeader, HTMLStencilElement {}
+
+  var HTMLAppHeaderElement: {
+    prototype: HTMLAppHeaderElement;
+    new (): HTMLAppHeaderElement;
+  };
+  interface HTMLElementTagNameMap {
+    'app-header': HTMLAppHeaderElement;
+  }
+  interface ElementTagNameMap {
+    'app-header': HTMLAppHeaderElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'app-header': JSXElements.AppHeaderAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppHeaderAttributes extends HTMLAttributes {
 
     }
   }
@@ -68,31 +131,66 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface AppProfile {
-      'match': MatchResults;
+    interface AppInput {
+      'name': string;
+      'placeholder': string;
     }
   }
 
-  interface HTMLAppProfileElement extends StencilComponents.AppProfile, HTMLStencilElement {}
+  interface HTMLAppInputElement extends StencilComponents.AppInput, HTMLStencilElement {}
 
-  var HTMLAppProfileElement: {
-    prototype: HTMLAppProfileElement;
-    new (): HTMLAppProfileElement;
+  var HTMLAppInputElement: {
+    prototype: HTMLAppInputElement;
+    new (): HTMLAppInputElement;
   };
   interface HTMLElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'app-input': HTMLAppInputElement;
   }
   interface ElementTagNameMap {
-    'app-profile': HTMLAppProfileElement;
+    'app-input': HTMLAppInputElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'app-profile': JSXElements.AppProfileAttributes;
+      'app-input': JSXElements.AppInputAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppProfileAttributes extends HTMLAttributes {
-      'match'?: MatchResults;
+    export interface AppInputAttributes extends HTMLAttributes {
+      'name'?: string;
+      'placeholder'?: string;
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface AppMain {
+
+    }
+  }
+
+  interface HTMLAppMainElement extends StencilComponents.AppMain, HTMLStencilElement {}
+
+  var HTMLAppMainElement: {
+    prototype: HTMLAppMainElement;
+    new (): HTMLAppMainElement;
+  };
+  interface HTMLElementTagNameMap {
+    'app-main': HTMLAppMainElement;
+  }
+  interface ElementTagNameMap {
+    'app-main': HTMLAppMainElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'app-main': JSXElements.AppMainAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppMainAttributes extends HTMLAttributes {
+
     }
   }
 }
@@ -125,6 +223,39 @@ declare global {
   }
   namespace JSXElements {
     export interface AppRootAttributes extends HTMLAttributes {
+
+    }
+  }
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface AppText {
+
+    }
+  }
+
+  interface HTMLAppTextElement extends StencilComponents.AppText, HTMLStencilElement {}
+
+  var HTMLAppTextElement: {
+    prototype: HTMLAppTextElement;
+    new (): HTMLAppTextElement;
+  };
+  interface HTMLElementTagNameMap {
+    'app-text': HTMLAppTextElement;
+  }
+  interface ElementTagNameMap {
+    'app-text': HTMLAppTextElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      'app-text': JSXElements.AppTextAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppTextAttributes extends HTMLAttributes {
 
     }
   }
