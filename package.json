@@ -23,7 +23,7 @@
   },
   "author": "Paweł Nowak",
   "license": "MIT",
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://github.com/pawelnvk/numbers",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
