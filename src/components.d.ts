@@ -25,9 +25,6 @@ declare global {
   interface HTMLAttributes {}
 }
 
-import '@stencil/router';
-import '@stencil/state-tunnel';
-
 
 declare global {
 
