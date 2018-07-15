@@ -1,0 +1,31 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "global": "app.global.js",
+  "core": "app.vwnlfls8.js",
+  "corePolyfilled": "app.ywobmiif.js",
+  "components": {
+    "app-button": {
+      "$": "bnvl2pyr"
+    },
+    "app-form": {
+      "$": "bnvl2pyr"
+    },
+    "app-header": {
+      "$": "bnvl2pyr"
+    },
+    "app-input": {
+      "$": "bnvl2pyr"
+    },
+    "app-main": {
+      "$": "bnvl2pyr"
+    },
+    "app-root": {
+      "$": "bnvl2pyr"
+    },
+    "app-text": {
+      "$": "bnvl2pyr"
+    }
+  }
+}
