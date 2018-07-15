@@ -2,6 +2,7 @@
 const sass = require('@stencil/sass');
 
 exports.config = {
+  baseUrl: '/numbers',
   globalStyle: 'src/global/app.css',
   plugins: [
     sass({
